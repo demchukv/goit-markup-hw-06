@@ -131,7 +131,7 @@ ul {
   transition-delay: 0.3s;
 }
 .is_open:checked ~ .header-contact {
-  visibility: visible;
+  right: 0;
 }
 
 .menu {
@@ -162,18 +162,18 @@ ul {
 }
 
 .header-contact {
-  visibility: hidden;
   font-style: normal;
+  visibility: hidden;
 }
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 12px;
 }
 .contact-item {
   font-style: normal;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--color-slate);
 }
@@ -181,6 +181,12 @@ ul {
 .contact-item:hover,
 .contact-item:focus {
   color: var(--color-ocean);
+}
+.is_open:checked ~ .header-contact {
+  position: absolute;
+  z-index: 999;
+  visibility: visible;
+  display: block;
 }
 
 /* Hero */
@@ -278,10 +284,17 @@ ul {
 .our-team-title {
   margin-bottom: 72px;
   text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--color-navy-blue);
+  text-transform: capitalize;
 }
 .our-team-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .our-team-item {
   background-color: var(--color-white);
@@ -289,7 +302,7 @@ ul {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   width: 264px;
-  margin: 0 auto;
+  align-self: center;
   margin-bottom: 72px;
 }
 .our-team-item:nth-child(n + 4) {
@@ -300,15 +313,6 @@ ul {
 }
 .our-team-info {
   padding: 32px 0;
-}
-.our-team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--color-navy-blue);
-  text-transform: capitalize;
 }
 
 .our-team-name {
@@ -382,8 +386,8 @@ ul {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 0 auto;
   margin-bottom: 48px;
+  align-self: center;
 }
 .our-portfolio-item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -443,11 +447,11 @@ ul {
 /* Footer */
 .footer {
   background-color: var(--color-navy-blue);
-  padding: 96px 0;
 }
 .footer .container {
   display: flex;
   flex-direction: column;
+  padding: 96px 16px;
 }
 .footer-left-block {
   margin-bottom: 72px;
@@ -558,7 +562,7 @@ ul {
   background-color: var(--color-iris);
   color: var(--color-white);
   border-radius: 4px;
-  border: 1px solid transparent;
+  border: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -602,7 +606,7 @@ ul {
   top: -100%;
   transform: translateX(-50%);
   background-color: var(--color-dairy);
-  width: 480px;
+  width: 288px;
   border-radius: 4px;
   padding: 24px;
   padding-top: 72px;
