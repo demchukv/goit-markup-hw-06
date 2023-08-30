@@ -145,6 +145,7 @@
   .our-portfolio-list {
     flex-wrap: wrap;
     max-width: 1128px;
+    row-gap: 48px;
   }
   .our-portfolio-item {
     width: calc((100% - 48px) / 3);

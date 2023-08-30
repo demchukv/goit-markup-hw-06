@@ -748,6 +748,12 @@ ul {
   background-color: var(--color-ocean);
 }
 
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: url('../images/people-office@2x.jpg');
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
