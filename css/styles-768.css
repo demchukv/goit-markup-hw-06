@@ -9,6 +9,7 @@
   .header .container {
     justify-content: space-between;
     padding: 0 16px;
+    height: 72px;
   }
   .header .container .nav {
     display: flex;
