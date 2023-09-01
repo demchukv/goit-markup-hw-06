@@ -158,10 +158,6 @@ ul {
 .menu-mobile .active {
   color: var(--color-ocean);
 }
-.mobile-menu-bottom {
-}
-.header-contact-mobile {
-}
 .contact-list-mobile {
   display: flex;
   flex-direction: column;
