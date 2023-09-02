@@ -52,7 +52,7 @@ ul {
 }
 .container {
   min-width: 320px;
-  max-width: 768px;
+  width: 320px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
@@ -63,16 +63,15 @@ ul {
   border-bottom: 1px solid var(--color-cornflower);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  max-width: 768px;
   min-width: 320px;
   margin: 0 auto;
 }
 .header .container {
   display: flex;
   flex-direction: row;
-  padding: 0 16px;
+  justify-content: space-between;
   align-items: center;
-  height: 56px;
+  padding: 0 16px;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -88,26 +87,21 @@ ul {
 }
 
 .menu-open-icon {
-  width: 24px;
-  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  display: block;
-  text-align: center;
   fill: #2f2f37;
-  position: absolute;
-  top: 16px;
-  right: 16px;
   background: transparent;
   outline: none;
   border: none;
 }
 .menu {
-  position: fixed;
-  visibility: hidden;
+  display: none;
 }
 .header-contact {
   font-style: normal;
-  visibility: hidden;
+  display: none;
 }
 .contact-list {
   display: flex;
@@ -201,7 +195,7 @@ ul {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/people-office-320.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -251,7 +245,6 @@ ul {
 .our-advantages-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
 }
 .our-advantages-item {
   width: 100%;
@@ -804,9 +797,43 @@ input[type='checkbox']:checked + label span {
   background-color: var(--color-ocean);
 }
 
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-320@2x.jpg);
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-768@2x.jpg);
+  }
+}
+
+@media (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office@2x.jpg);
+  }
+}
+
 @media (min-width: 768px) {
   .container {
-    max-width: 1158px;
+    min-width: 768px;
+    width: 768px;
   }
   /* Header */
   .header {
@@ -827,7 +854,7 @@ input[type='checkbox']:checked + label span {
     visibility: hidden;
   }
   .menu {
-    visibility: visible;
+    display: flex;
   }
   .logo {
     font-family: 'Raleway', sans-serif;
@@ -888,7 +915,7 @@ input[type='checkbox']:checked + label span {
   }
 
   .header-contact {
-    visibility: visible;
+    display: block;
     font-style: normal;
   }
   .contact-list {
@@ -910,6 +937,12 @@ input[type='checkbox']:checked + label span {
 
   /* Hero */
   .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-768.jpg);
     padding: 112px 0;
     max-width: 1158px;
   }
@@ -924,12 +957,12 @@ input[type='checkbox']:checked + label span {
   .our-advantages-list {
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
   }
   .our-advantages-item {
     width: calc((100% - 24px) / 2);
-  }
-  .our-advantages-item:nth-child(n + 3) {
-    margin-bottom: 0;
+    margin: 0;
   }
   .our-advantages-title {
     text-align: left;
@@ -939,16 +972,14 @@ input[type='checkbox']:checked + label span {
   .our-team-list {
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 768px;
     margin: 0 auto;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
   }
   .our-team-item {
     width: calc((100%-24px) / 2);
     align-self: center;
-  }
-  .our-team-item:nth-child(n + 3) {
-    margin-bottom: 0;
+    margin: 0;
   }
 
   /* Our Portfolio */
@@ -956,12 +987,14 @@ input[type='checkbox']:checked + label span {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 768px;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
     margin: 0 auto;
     justify-content: center;
   }
-  .our-portfolio-item:nth-child(n + 5) {
-    margin-bottom: 0;
+  .our-portfolio-item {
+    width: 356px;
+    margin: 0;
   }
 
   /* Footer */
@@ -1017,8 +1050,9 @@ input[type='checkbox']:checked + label span {
     padding: 120px 0;
   }
   .container {
+    min-width: 1158px;
+    width: 1158px;
     padding: 0 15px;
-    max-width: 1440px;
   }
 
   /* Header */
@@ -1027,13 +1061,12 @@ input[type='checkbox']:checked + label span {
   }
   .header .container {
     padding: 0 15px;
-    justify-content: flex-start;
+    justify-content: space-between;
     max-width: 1158px;
   }
   .header .container .nav {
     display: flex;
     align-items: center;
-    margin-right: 282px;
   }
   .logo {
     font-family: 'Raleway', sans-serif;
@@ -1086,7 +1119,7 @@ input[type='checkbox']:checked + label span {
   }
 
   .header-contact {
-    font-style: normal;
+    display: flex;
   }
   .contact-list {
     display: flex;
@@ -1108,6 +1141,12 @@ input[type='checkbox']:checked + label span {
 
   /* Hero */
   .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
     padding: 188px 0;
     max-width: 1440px;
   }
@@ -1145,6 +1184,9 @@ input[type='checkbox']:checked + label span {
     letter-spacing: 0.02em;
     text-align: left;
   }
+  .our-advantages-text {
+    font-weight: 400;
+  }
 
   /* Our team */
   .our-team-list {
@@ -1179,7 +1221,6 @@ input[type='checkbox']:checked + label span {
     flex-wrap: nowrap;
     padding: 0 16px;
     align-items: baseline;
-    max-width: 1158px;
     margin: 0 auto;
   }
   .footer-left-block {
@@ -1197,17 +1238,6 @@ input[type='checkbox']:checked + label span {
   /* Modal window with form */
   .modal {
     width: 480px;
-  }
-}
-
-@media (min-resolution: 192dpi) {
-  .hero {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/people-office@2x.jpg);
   }
 }
 
