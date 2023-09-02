@@ -837,6 +837,9 @@ input[type='checkbox']:checked + label span {
     align-items: center;
     margin-right: 10px;
   }
+  .menu-mobile-block {
+    visibility: hidden;
+  }
   .menu {
     visibility: visible;
   }
@@ -1061,7 +1064,9 @@ input[type='checkbox']:checked + label span {
   .logo-web {
     color: var(--color-navy-blue);
   }
-
+  .menu-mobile-block {
+    visibility: hidden;
+  }
   .menu {
     display: flex;
     gap: 40px;
