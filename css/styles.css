@@ -97,6 +97,9 @@ ul {
   position: absolute;
   top: 16px;
   right: 16px;
+  background: transparent;
+  outline: none;
+  border: none;
 }
 .menu {
   position: fixed;
