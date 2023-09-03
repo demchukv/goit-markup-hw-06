@@ -64,6 +64,7 @@ ul {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   min-width: 320px;
+  margin: 0 auto;
 }
 .header .container {
   display: flex;
@@ -1052,7 +1053,6 @@ input[type='checkbox']:checked + label span {
   }
   .header .container {
     justify-content: space-between;
-    max-width: 1158px;
   }
   .header .container .nav {
     display: flex;
