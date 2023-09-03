@@ -70,6 +70,8 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -834,6 +836,8 @@ input[type='checkbox']:checked + label span {
   }
   .header .container {
     justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .header .container .nav {
     display: flex;
