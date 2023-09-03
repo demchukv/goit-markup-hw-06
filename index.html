@@ -32,7 +32,7 @@
             <li><a class="nav-item" href="#modal">Contacts</a></li>
           </ul>
         </nav>
-        <button class="menu-open-icon">
+        <button class="menu-open-icon" id="open-menu">
           <svg class="menu-icon" width="24" height="24">
             <use href="./images/icons.svg#menu"></use>
           </svg>
@@ -59,7 +59,9 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions<br />for Your Business</h1>
-          <button type="button" class="order-button">Order Service</button>
+          <button type="button" class="order-button" id="order-button">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -527,9 +529,9 @@
     </footer>
 
     <!-- Pop-up window -->
-    <div class="modal-overlay is-hidden">
+    <div class="modal-overlay is-hidden" id="order-modal-form">
       <div class="modal">
-        <button class="modal-close-btn" type="button">
+        <button class="modal-close-btn" id="modal-close-btn" type="button">
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#close"></use>
           </svg>
@@ -616,8 +618,8 @@
     <!-- End popup window block -->
 
     <!-- Start Mobile Menu -->
-    <div class="menu-mobile-block is-hidden">
-      <button class="modal-close-btn" type="button">
+    <div class="menu-mobile-block is-hidden" id="menu-block">
+      <button class="modal-close-btn" type="button" id="close-menu">
         <svg class="modal-close-icon" width="8" height="8">
           <use href="./images/icons.svg#close"></use>
         </svg>
@@ -681,5 +683,44 @@
       </div>
     </div>
     <!-- End Mobile Menu -->
+
+    <script>
+      window.addEventListener('DOMContentLoaded', event => {
+        const obtn = document.getElementById('order-button');
+        if (obtn) {
+          obtn.addEventListener('click', openModal, false);
+        }
+        const cbtn = document.getElementById('modal-close-btn');
+        if (cbtn) {
+          cbtn.addEventListener('click', closeModal, false);
+        }
+        const omenu = document.getElementById('open-menu');
+        if (omenu) {
+          omenu.addEventListener('click', openMenu, false);
+        }
+        const cmenu = document.getElementById('close-menu');
+        if (cmenu) {
+          cmenu.addEventListener('click', closeMenu, false);
+        }
+      });
+      function openModal() {
+        document
+          .getElementById('order-modal-form')
+          .classList.remove('is-hidden');
+        document.getElementById('order-modal-form').classList.add('is-open');
+      }
+      function closeModal() {
+        document.getElementById('order-modal-form').classList.remove('is-open');
+        document.getElementById('order-modal-form').classList.add('is-hidden');
+      }
+      function openMenu() {
+        document.getElementById('menu-block').classList.remove('is-hidden');
+        document.getElementById('menu-block').classList.add('is-open');
+      }
+      function closeMenu() {
+        document.getElementById('menu-block').classList.remove('is-open');
+        document.getElementById('menu-block').classList.add('is-hidden');
+      }
+    </script>
   </body>
 </html>

@@ -64,14 +64,12 @@ ul {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   min-width: 320px;
-  margin: 0 auto;
 }
 .header .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -115,7 +113,6 @@ ul {
   letter-spacing: 0.02em;
   color: var(--color-slate);
 }
-
 .contact-item:hover,
 .contact-item:focus {
   color: var(--color-ocean);
@@ -213,7 +210,6 @@ ul {
   margin: 0 auto;
   margin-bottom: 72px;
 }
-
 .order-button {
   display: block;
   min-width: 169px;
@@ -235,7 +231,6 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .order-button:hover,
 .order-button:focus {
   background-color: var(--color-ocean);
@@ -444,9 +439,7 @@ ul {
 .footer .container {
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
   margin: 0 auto;
-  max-width: 768px;
 }
 .footer-left-block {
   margin-bottom: 72px;
@@ -841,8 +834,6 @@ input[type='checkbox']:checked + label span {
   }
   .header .container {
     justify-content: space-between;
-    padding: 0 16px;
-    height: 72px;
   }
   .header .container .nav {
     display: flex;
@@ -877,10 +868,6 @@ input[type='checkbox']:checked + label span {
   }
 
   .menu {
-    position: relative;
-    top: auto;
-    right: auto;
-    height: auto;
     display: flex;
     background: none;
     flex-direction: row;
@@ -1060,7 +1047,6 @@ input[type='checkbox']:checked + label span {
     max-width: 1440px;
   }
   .header .container {
-    padding: 0 15px;
     justify-content: space-between;
     max-width: 1158px;
   }
@@ -1127,7 +1113,6 @@ input[type='checkbox']:checked + label span {
     gap: 40px;
   }
   .contact-item {
-    font-style: normal;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -1208,9 +1193,6 @@ input[type='checkbox']:checked + label span {
   .our-portfolio-item {
     width: calc((100% - 48px) / 3);
   }
-  .our-portfolio-item:nth-child(n + 4) {
-    margin-bottom: 0;
-  }
 
   /* Footer */
   .footer {
@@ -1219,7 +1201,7 @@ input[type='checkbox']:checked + label span {
   .footer .container {
     display: flex;
     flex-wrap: nowrap;
-    padding: 0 16px;
+    padding: 0 15px;
     align-items: baseline;
     margin: 0 auto;
   }
