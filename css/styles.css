@@ -804,28 +804,6 @@ input[type='checkbox']:checked + label span {
   }
 }
 
-@media (min-width: 768px) and (min-resolution: 192dpi) {
-  .hero {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/people-office-768@2x.jpg);
-  }
-}
-
-@media (min-width: 1158px) and (min-resolution: 192dpi) {
-  .hero {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/people-office@2x.jpg);
-  }
-}
-
 @media (min-width: 768px) {
   .container {
     min-width: 768px;
@@ -1037,6 +1015,17 @@ input[type='checkbox']:checked + label span {
   }
 }
 
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-768@2x.jpg);
+  }
+}
+
 @media (min-width: 1158px) {
   .section {
     padding: 120px 0;
@@ -1219,11 +1208,23 @@ input[type='checkbox']:checked + label span {
   }
   .footer-social {
     margin-right: 80px;
+    margin-bottom: 0;
   }
 
   /* Modal window with form */
   .modal {
     width: 480px;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office@2x.jpg);
+    }
   }
 }
 
