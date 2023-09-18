@@ -597,7 +597,7 @@ ul {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: scale(1) translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--color-dairy);
   width: 288px;
@@ -616,6 +616,10 @@ ul {
 .is-open {
   visibility: visible;
   opacity: 1;
+}
+.modal-overlay.is-hidden .modal {
+  transform: scale(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-title {
   font-weight: 500;
